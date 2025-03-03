@@ -3,7 +3,7 @@
   import CreateModal from "../atoms/CreateModal";
 import { color } from "framer-motion";
 
-  const Navbar = () => {
+  const Navbar = ({setUsers}) => {
     const { colorMode, toggleColorMode } = useColorMode()
     return (
       <Container maxW="900px">
@@ -28,7 +28,7 @@ import { color } from "framer-motion";
                 <Icon name={colorMode === "light" ? "moon" : "sun"} > {colorMode === "light" ? "Dark" : "Light"}</Icon>
               </Button>
 
-              <CreateModal />
+              <CreateModal setUsers={setUsers} />
             </Flex>
           </Flex>
         </Box>

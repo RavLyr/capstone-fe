@@ -17,8 +17,8 @@ import {
 	useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { BiEditAlt } from "react-icons/bi";
-import { BASE_URL } from "../App";
+import { EditIcon } from "@chakra-ui/icons";
+import { BASE_URL } from "../../App";
 
 function EditModal({ setUsers, user }) {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -75,7 +75,7 @@ function EditModal({ setUsers, user }) {
 				colorScheme='blue'
 				aria-label='See menu'
 				size={"sm"}
-				icon={<BiEditAlt size={20} />}
+				icon={<EditIcon size={20} />}
 			/>
 
 			<Modal isOpen={isOpen} onClose={onClose}>
