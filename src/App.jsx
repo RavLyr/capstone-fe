@@ -4,11 +4,11 @@ import Navbar from "./components/molecules/Navbar";
 import UserGrid from "./components/molecules/UserGrid";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [users, setUsers] = useState([]);
 
   return (
     <Stack minH="100vh" p={4} spacing={3}>
-      <Navbar />
+      <Navbar setutUsers={setUsers}/>
       <Container maxW="1200px" my={4}>
         <Box
           fontSize={{ base: "xl", md: "2xl" }}
@@ -24,7 +24,7 @@ function App() {
             Sahabat
           </Box>
         </Box>
-        <UserGrid />
+        <UserGrid users={users}/>
       </Container>
     </Stack>
   );

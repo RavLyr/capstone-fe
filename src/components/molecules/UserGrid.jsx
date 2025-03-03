@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid } from "@chakra-ui/react";
 
 
-const UserGrid = () => {
+const UserGrid = ({users}) => {
   return (
    <Grid
     templateColumns={{
@@ -10,7 +10,9 @@ const UserGrid = () => {
       md: "repeat(2, 1fr)",
       lg: "repeat(3, 1fr)",
     }}
+    gap={4}
   >
+
     
    </Grid>
   )
